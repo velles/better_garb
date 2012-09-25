@@ -1,29 +1,19 @@
-Garb
+Better Garb
 ====
-
-  http://github.com/vigetlabs/garb
-
-Important Changes
-=================
-
-  With The release of version 0.9.0 I have officially deprecated Garb::Report, Garb::Resource,
-  Garb::Profile, and Garb::Account. Garb::Report and Garb::Resource should be replaced by Garb::Model.
-  Garb::Profile and Garb::Account are supplanted by their Garb::Management::* counterparts.
+  This gem is based on Garb version 0.9.1 - http://github.com/vigetlabs/garb 
+  It is forked from RubyGems as v0.9.1 was missing in Github. 
   
-  I'll be working hard to update the documentation over the next day or so to highlight all of the
-  old features in the new classes, as well as any new features brought by the new classes. If you
-  are looking for something in particular, please open an issue and I will try to prioritize these
-  requests.
-
-  Please read CHANGELOG
+  Using Google Analytics API v2.4 . Main Difference from the official version of Garb is that 
+  this is looding all the Profiles and/or Accounts for a login . Garb has a limit of 1000 which is the default
+  Google Abalytics limit. 
 
 Description
 -----------
 
-  Provides a Ruby API to the Google Analytics API.
-
-  http://code.google.com/apis/analytics/docs/gdata/gdataDeveloperGuide.html
-
+  Provides a Ruby API to the Google Analytics API v2.4
+  
+  https://developers.google.com/analytics/devguides/config/mgmt/v2/
+  
 Basic Usage
 ===========
 
@@ -135,10 +125,6 @@ SSL
   For whatever reason, simply creating a new certificate store and setting the defaults would
   not validate the google ssl certificate as authentic.
 
-TODOS
------
-
-  * rebuild AND/OR filtering in Garb::Model
 
 Requirements
 ------------
@@ -155,13 +141,19 @@ Requirements for Testing
 Install
 -------
 
-    gem install garb
+  Add this to your Gemfile:
+    
+    gem 'better_garb', git: "https://github.com/velles/better_garb.git"
+    
+  and run in your project
+    
+    bundle install
 
 Contributors
 ------------
 
   Many Thanks, for all their help, goes to:
-
+  * Tony Pitale - original author 
   * Patrick Reagan
   * Justin Marney
   * Nick Plante
