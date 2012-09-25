@@ -143,7 +143,7 @@ Install
 
   Add this to your Gemfile:
     
-    gem better_garb, git: "https://github.com/velles/better_garb.git"
+    gem 'better_garb', git: "https://github.com/velles/better_garb.git"
     
   and run in your project
     
