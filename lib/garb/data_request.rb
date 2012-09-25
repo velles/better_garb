@@ -29,7 +29,6 @@ module Garb
     end
 
     def single_user_request
-      puts "#{uri.path}#{query_string}"
       http = Net::HTTP.new(uri.host, uri.port)
       http.use_ssl = true
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE
